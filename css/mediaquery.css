@@ -1,0 +1,118 @@
+/* ==========================================================================
+   MEDIA QUERIES (RESPONSIVE DESIGN)
+   ========================================================================== */
+
+/* --- 💻 LAPTOPS Y PANTALLAS MEDIANAS (Max 1024px) --- */
+@media (max-width: 1024px) {
+    .hero-container {
+        gap: 30px;
+        padding-top: 140px; /* Espacio para que el header absoluto no pise el texto */
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .highlight {
+        font-size: 2rem;
+    }
+
+    .subject-image {
+        max-width: 380px; /* Achicamos un poco la foto principal */
+    }
+}
+
+/* --- 🗺️ TABLETS (Max 768px) --- */
+@media (max-width: 768px) {
+    /* Cambiamos el Grid de 2 columnas a 1 sola columna vertical */
+    .hero-container {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        padding-top: 160px;
+        min-height: auto;
+        gap: 50px;
+    }
+
+    .left-column {
+        padding-right: 0; /* Quitamos el espacio lateral sobrante */
+        align-items: center; /* Centramos todo el contenido escrito */
+    }
+
+    .description {
+        margin: 0 auto;
+    }
+
+    /* Reordenamos con Flexbox para que la foto quede arriba del texto si lo prefieres, 
+       o la dejamos abajo (por defecto el orden del HTML la tira abajo) */
+    .right-column {
+        order: -1; /* Opcional: Envía la foto arriba del texto en modo tablet/móvil */
+    }
+
+    .subject-image {
+        max-width: 320px;
+    }
+
+    /* Ajustamos los enlaces de navegación */
+    nav {
+        padding: 0 20px;
+        justify-content: space-between;
+    }
+}
+
+/* --- 📱 SMARTPHONES (Max 480px) --- */
+@media (max-width: 480px) {
+    .hero-container {
+        padding-top: 140px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .highlight {
+        font-size: 1.6rem;
+    }
+
+    /* Los bloques de tecnología/gym/mindset se acomodan en grid de 2 columnas o vertical */
+    .floating-icons-group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .icon-block {
+        width: 100%; /* Ocupan todo el ancho de su celda de la grilla */
+        padding: 1rem;
+    }
+
+    /* El tercer bloque (Mindset) se estira para ocupar las dos columnas abajo */
+    .icon-block.mindset-icon {
+        grid-column: span 2;
+    }
+
+    /* Botones de acción verticales para que no se aplasten */
+    .action-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .btn {
+        width: 100%; /* Botones de ancho completo en celular */
+        padding: 0.8rem 1.5rem;
+    }
+
+    .subject-image {
+        max-width: 260px; /* Foto más compacta para pantallas pequeñas */
+    }
+
+    header .header-icons-container {
+        justify-content: center; /* Centramos las redes sociales en móviles */
+        padding-right: 0;
+    }
+}

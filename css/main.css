@@ -1,0 +1,255 @@
+:root {
+    --color-background: #030712;
+    --color-text: #f3f4f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block; /* Cambiado a inline-block para manejar mejor estructuras */
+    color: var(--color-text);
+}
+
+/* --- ESTILOS DEL HEADER (Estructura fija arriba) --- */
+header {
+    width: 100%;
+    position: absolute; /* Permite que flote arriba del fondo sin romper el flujo */
+    top: 0;
+    left: 0;
+    z-index: 100; /* Lo empuja al frente de cualquier capa o imagen */
+}
+
+header .header-icons-container {
+   width: 100%;
+   height: 50px;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   margin:auto;
+   max-width: 1200px; /* Sincronizado con el ancho de tu sección hero */
+
+}
+
+header .header-icons-container .header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-direction: row-reverse;
+}
+
+/* Control de tamaño de los iconos de redes sociales */
+header .header-icons-container .header-icons a img {
+    width: 24px;  
+    height: 24px; 
+    display: block;
+    transition: transform 0.2s ease; 
+}
+
+.header-icons a img:hover {
+    transform: scale(1.1); 
+}
+
+/* Barra de navegación (Logo + About me) */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+    width: 100%;
+    padding: 0 50px;
+}
+
+nav .nav-logo-container img {
+    width: 70px;
+    height: auto;
+    border-radius: 28px;
+    display: block;
+}
+
+nav .profile-link a {
+    color: var(--color-text);
+    border-bottom: 2px solid white;
+    font-size: 0.9rem;
+    padding-bottom: 2px;
+}
+
+/* --- ESTILOS BASE DEL BODY --- */
+body {
+    background-color: #030712; 
+    background-image:
+    radial-gradient(circle at 10% 10%, rgba(30, 58, 138, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 90% 90%, rgba(13, 148, 136, 0.1) 0%, transparent 40%);
+        
+    color: #f3f4f6;
+    line-height: 1.6;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif; 
+    overflow-x: hidden;
+    /* Corregido: Se eliminó el position:fixed que rompía el scroll y las capas */
+}
+
+/* --- CONTENEDOR PRINCIPAL (2 Columnas) --- */
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    align-items: center; 
+    justify-items: center; 
+    min-height: 100vh; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    /*padding-top: 140px; Compensación exacta de la altura del header (50px + 90px) */
+}
+
+/* --- COLUMNA IZQUIERDA (Texto) --- */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+    padding-right: 3rem;
+}
+
+.text-content {
+    margin-bottom: 2rem;
+}
+
+.greeting {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.main-title {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.highlight {
+    display: block; 
+    color: #f3f4f6; 
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+
+.description {
+    font-size: 1.1rem;
+    font-weight: 300;
+    max-width: 500px;
+}
+
+/* Bloques de características / Habilidades */
+.floating-icons-group {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.icon-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
+    border-radius: 15px;
+    background-color: rgba(3, 7, 18, 0.6);
+    border: 1px solid rgba(13, 148, 136, 0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    color: #f3f4f6;
+    text-align: center;
+    width: 130px;
+    transition: transform 0.3s ease;
+}
+
+.icon-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(13, 148, 136, 0.2);
+}
+
+.icon-visual {
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+    line-height: 1;
+}
+
+.icon-label {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Botones con etiquetas <a> (Estilos aplicados directo a la clase) */
+.action-buttons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn {
+    font-size: 1rem;
+    padding: 0.8rem 2.5rem;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-weight: 700;
+}
+
+.btn-primary {
+    background-color: #1d64f2; /* Azul eléctrico de la interfaz */
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(29, 100, 242, 0.3); /* Sombra sutil del mismo tono */
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1552cd; /* Un tono más oscuro (Deep Blue) para el feedback visual */
+    box-shadow: 0 6px 20px rgba(29, 100, 242, 0.5); /* Incrementa el resplandor */
+    transform: translateY(-1px); /* Efecto micro-interacción de elevación */
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border-color: rgba(30, 58, 138, 0.8);
+    color: #f3f4f6;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(30, 58, 138, 0.2);
+    border-color: rgba(30, 58, 138, 1);
+}
+
+/* --- COLUMNA DERECHA (Tu foto) --- */
+.right-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subject-center-container {
+    position: relative;
+    z-index: 10;
+}
+
+.subject-image {
+    max-width: 450px; 
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.subject-glow {
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    top: -15%;
+    left: -15%;
+    background: radial-gradient(circle, rgba(30, 58, 138, 0.3) 0%, transparent 60%);
+    z-index: -1;
+    border-radius: 50%;
+}

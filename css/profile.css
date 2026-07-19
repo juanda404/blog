@@ -1,0 +1,62 @@
+--- ESTILOS DE CONTACTO SEMÁNTICO Y PREMIUM --- */
+.contact-info {
+    font-style: normal; /* Elimina la cursiva por defecto de <address> */
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Espaciado uniforme entre cada fila de contacto */
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center; /* Alinea verticalmente la etiqueta y el link */
+    font-size: 0.95rem;
+    padding: 6px 0;
+}
+
+/* Estilo para las etiquetas de texto fijo (Email, Location, Phone) */
+.contact-label {
+    font-weight: 600;
+    color: rgba(243, 244, 246, 0.4); /* Un tono más sutil para que resalte el dato real */
+    min-width: 80px; /* Ancho fijo para que todos los links queden perfectamente alineados a la izquierda */
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+/* Estilo base para los enlaces interactivos */
+.contact-link {
+    color: rgba(243, 244, 246, 0.85);
+    font-weight: 500;
+    text-decoration: none;
+    position: relative; /* Necesario para el efecto de la línea animada */
+    padding-bottom: 2px;
+    transition: color 0.25s ease;
+}
+
+/* Micro-interacción: El texto se enciende con tu azul de marca */
+.contact-link:hover {
+    color: #1d64f2; 
+}
+
+/* --- EFECTO PRO: Línea animada expansiva debajo del link al hacer hover --- */
+.contact-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0); /* La línea empieza invisible y sin ancho */
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: #1d64f2; /* El azul eléctrico */
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out; /* Animación fluida de salida */
+}
+
+.contact-link:hover::after {
+    transform: scaleX(1); /* La línea se despliega al 100% de ancho en hover */
