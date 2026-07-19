@@ -2,6 +2,9 @@
 
 This repository contains a static personal blog built with HTML, CSS, and multimedia assets.
 
+<img width="1220" height="735" alt="image" src="https://github.com/user-attachments/assets/50983482-3284-4e08-b7a2-65038fdc9a90" />
+
+
 ## Project Structure
 
 - `index.html` - Main blog homepage.
