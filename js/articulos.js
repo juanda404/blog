@@ -1,4 +1,4 @@
-import { blogsPosts } from "./data/data.js";
+import { blogsPosts } from "../data/data.js";
 
 const blog = document.getElementById("blogs-container");
 const buttons = document.querySelectorAll(".articles-buttons-container button");
