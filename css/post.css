@@ -1,163 +1,173 @@
 /* --- CONTENEDOR MAESTRO DEL DETALLE --- */
 .article-main-container {
-    display: grid;
-    /* Divide la pantalla: 1fr ocupará el 70% aprox, y 350px fijos para la barra lateral */
-    grid-template-columns: 1fr 350px;
-    gap: 50px; /* Separación física entre el post y la barra lateral */
-    max-width: 1200px;
-    margin: 120px auto 50px auto; /* Agrega espacio superior para el header fijo */
-    padding: 0 2rem;
-    align-items: start; /* Evita que la barra lateral se estire verticalmente de forma fea */
+  display: grid;
+  /* Divide la pantalla: 1fr ocupará el 70% aprox, y 350px fijos para la barra lateral */
+  grid-template-columns: 1fr 350px;
+  gap: 50px; /* Separación física entre el post y la barra lateral */
+  max-width: 1200px;
+  margin: 120px auto 50px auto; /* Agrega espacio superior para el header fijo */
+  padding: 0 2rem;
+  align-items: start; /* Evita que la barra lateral se estire verticalmente de forma fea */
 }
 
 /* --- COLUMNA DE CONTENIDO PRINCIPAL (POST) --- */
 .article-content {
-    color: #f3f4f6;
+  color: #f3f4f6;
 }
 
 .article-category {
-    color: #1d64f2; /* Azul eléctrico de tu marca */
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
+  color: #1d64f2; /* Azul eléctrico de tu marca */
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 
 .article-content h1 {
-    font-size: 2.8rem;
-    line-height: 1.2;
-    margin-bottom: 15px;
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 15px;
 }
 
 .article-meta {
-    color: rgba(243, 244, 246, 0.5);
-    font-size: 0.9rem;
-    margin-bottom: 30px;
+  color: rgba(243, 244, 246, 0.5);
+  font-size: 0.9rem;
+  margin-bottom: 30px;
 }
 
 .article-body p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
 }
 
 .article-body ul {
-    margin-left: 20px;
-    margin-bottom: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 .article-body ul li {
-    margin-bottom: 10px;
-    font-size: 1.05rem;
-    color: rgba(243, 244, 246, 0.9);
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  color: rgba(243, 244, 246, 0.9);
 }
 
 /* --- COLUMNA BARRA LATERAL (SIDEBAR) --- */
 .article-sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 30px; /* Separación entre el bloque de autor y artículos relacionados */
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Separación entre el bloque de autor y artículos relacionados */
 }
 
 /* Estilo unificado para los bloques contenedores oscuros */
 .sidebar-block {
-    background-color: rgba(3, 7, 18, 0.6); /* Fondo traslúcido idéntico a tus tarjetas */
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 16px; /* Bordes curvados premium */
-    padding: 24px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background-color: rgba(
+    3,
+    7,
+    18,
+    0.6
+  ); /* Fondo traslúcido idéntico a tus tarjetas */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px; /* Bordes curvados premium */
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar-block h3 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #f3f4f6;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #f3f4f6;
 }
 
 /* Bloque Autor Interno */
 .author-info {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
 }
 
 .author-info img {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%; /* Foto circular */
-    object-fit: cover;
-    border: 2px solid #1d64f2; /* Aro de marca azul */
+  width: 55px;
+  height: 55px;
+  border-radius: 50%; /* Foto circular */
+  object-fit: cover;
+  border: 2px solid #1d64f2; /* Aro de marca azul */
 }
 
 .author-name {
-    font-weight: 600;
-    font-size: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .author-role {
-    font-size: 0.85rem;
-    color: rgba(243, 244, 246, 0.5);
+  font-size: 0.85rem;
+  color: rgba(243, 244, 246, 0.5);
 }
 
 .author-bio {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: rgba(243, 244, 246, 0.7);
-    margin-bottom: 20px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(243, 244, 246, 0.7);
+  margin-bottom: 20px;
+}
+
+.author-social {
+  display: flex;
+  gap: 15px;
 }
 
 /* Bloque Artículos Relacionados Listado */
 .related-list {
-    list-style: none;
+  list-style: none;
 }
 
 .related-list li {
-    margin-bottom: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-    padding-bottom: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  padding-bottom: 10px;
 }
 
 .related-list li:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .related-list li a {
-    color: rgba(243, 244, 246, 0.8);
-    font-size: 0.95rem;
-    transition: color 0.2s ease;
+  color: rgba(243, 244, 246, 0.8);
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
 }
 
 .related-list li a:hover {
-    color: #1d64f2; /* El enlace se ilumina en azul al hacer hover */
+  color: #1d64f2; /* El enlace se ilumina en azul al hacer hover */
 }
 
 /* --- CONTENEDOR E IMAGEN PRINCIPAL DEL POST --- */
 .article-main-image-container {
-    width: 100%;
-    max-height: 400px; /* Limita la altura máxima para que no se coma toda la pantalla */
-    overflow: hidden; /* Corta cualquier desborde si la imagen es muy alta */
-    border-radius: 16px; /* Esquinas redondeadas premium a juego con el sidebar */
-    margin-bottom: 30px; /* Separación con el texto inferior */
-    border: 1px solid rgba(255, 255, 255, 0.05); /* Borde sutil */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Sombra profunda para darle dimensión */
+  width: 100%;
+  max-height: 400px; /* Limita la altura máxima para que no se coma toda la pantalla */
+  overflow: hidden; /* Corta cualquier desborde si la imagen es muy alta */
+  border-radius: 16px; /* Esquinas redondeadas premium a juego con el sidebar */
+  margin-bottom: 30px; /* Separación con el texto inferior */
+  border: 1px solid rgba(255, 255, 255, 0.05); /* Borde sutil */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Sombra profunda para darle dimensión */
 }
 
 .article-main-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Mantiene la proporción de la imagen recortando los bordes excedentes */
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantiene la proporción de la imagen recortando los bordes excedentes */
+  display: block;
 }
 
 /* --- RESPONSIVE OPTIMIZATION --- */
 @media (max-width: 900px) {
-    .article-main-container {
-        grid-template-columns: 1fr; /* En tablets y celulares pasa a una sola columna */
-        gap: 40px;
-        margin-top: 100px;
-    }
+  .article-main-container {
+    grid-template-columns: 1fr; /* En tablets y celulares pasa a una sola columna */
+    gap: 40px;
+    margin-top: 100px;
+  }
 }

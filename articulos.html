@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog sobre tecnología, gimnasio y crecimiento personal." />
   <title>Posts</title>
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/posts.css" />
@@ -13,11 +14,11 @@
   <header>
     <nav>
       <section class="nav-logo-container">
-        <a href="/"><img src="assets/images/logo.jpeg" alt="Logo of blog" /></a>
+        <a href="index.html"><img src="assets/images/logo.jpeg" alt="Logo de JD Blog" /></a>
       </section>
       <section class="profile-link">
         <a href="index.html">Home</a>
-        <a href="/profile.html">About me</a>
+        <a href="profile.html">About me</a>
       </section>
     </nav>
   </header>
@@ -30,101 +31,66 @@
       </div>
       <div class="articles-buttons-container">
         <div>
-          <button class="btn btn-primary"><a href="#">General</a></button>
-          <button class="btn btn-secondary"><a href="#">Tecnology</a></button>
-          <button class="btn btn-secondary"><a href="#">Gym</a></button>
-          <button class="btn btn-secondary"><a href="#">Personal growth</a></button>
+          <button class="btn btn-primary" data-category="General">General</button>
+          <button class="btn btn-secondary" data-category="Technology">Technology</button>
+          <button class="btn btn-secondary" data-category="Gym">Gym</button>
+          <button class="btn btn-secondary" data-category="Personal Growth">Personal growth</button>
         </div>
         <input type="search" placeholder="Search..." />
       </div>
     </section>
-    <section class="articles-main-container">
-        <article class="article-card">
-          <img src="assets/images/blog1.avif" alt="laptop on desktop" />
-          <h2>React js</h2>
-          <p>React can be used to create all kinds of web and mobile applications, interfaces, and much more..</p>
-          <a href="articulo.html">Read more</a>
-        </article>
-        <article class="article-card">
-          <img src="assets/images/blog2.avif" alt="laptop on desktop" />
-          <h2>Node js</h2>
-          <p><b>¿What and philosophy.</b> Node.js is a JavaScript runtime enviroment created in 2009 , it is oriented to servers.</p>
-          <a href="#">Read more</a>
-        </article>
-        <article class="article-card">
-          <img src="assets/images/blog3.png" alt="history of javascript" />
-          <h2>JavaScript</h2>
-          <p>The purpose of JavaScript was to address the issues associated with static pages.</p>
-          <a href="#">Read more</a>
-        </article>
-        <article class="article-card">
-          <img src="assets/images/blog4.png" alt="Placeholder Image" />
-          <h2>Java Script: WEB COMPONENTS</h2>
-          <p>building blocks that allow developers to create web applications in a modular and efficient manner.</p>
-          <a href="#">Read more</a>
-        </article>
-        <article class="article-card">
-          <img src="assets/images/blog5.jpg" alt="IA hand" />
-          <h2>INTRODUCTION TO MACHINE LEARNING </h2>
-          <p>What is the artificial intelligence? They are computer algorithms with large amounts of data that read files and recognize patterns. </p>
-          <a href="#">Read more</a>
-        </article>
-        <article class="article-card">
-          <img src="assets/images/blog6.jpg" alt="book of english language" />
-          <h2>LEARN ENGLISH</h2>
-          <p>daily routine that can be followed during the process of learning a new language</p>
-          <a href="#">Read more</a>
-        </article>
+    <section id="blogs-container" class="articles-main-container">
     </section>
   </main>
+  <footer class="footer-container">
+    <div class="footer-content">
+      <!-- Columna 1: Branding -->
+      <div class="footer-brand">
+        <h3>JD</h3>
+        <p class="footer-subtitle">Juan David</p>
+        <p class="footer-role">Frontend Developer</p>
+        <p class="footer-phrase">Training body, mind and code</p>
+      </div>
 
-</body>
-<footer class="footer-container">
-  <div class="footer-content">
-    <!-- Columna 1: Branding -->
-    <div class="footer-brand">
-      <h3>JD</h3>
-      <p class="footer-subtitle">Juan David</p>
-      <p class="footer-role">Frontend Developer</p>
-      <p class="footer-phrase">Training body, mind and code</p>
-    </div>
-    
-    <!-- Columna 2: Enlaces Rápidos -->
-    <div class="footer-links">
-      <h4>Enlaces</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="articulos.html">Posts</a></li>
-        <li><a href="profile.html">About me</a></li>
-      </ul>
-    </div>
-    
-    <!-- Columna 3: Redes Sociales -->
-    <div class="footer-icons-block">
-      <h4>Sígueme</h4>
-      <div class="footer-icons">
-        <a href="https://x.com/juanda4042" target="_blank" rel="noopener noreferrer">
-          <img src="assets/icons/twitter.svg" alt="Twitter" />
-        </a>
-        <a href="https://www.facebook.com/Juandavidss" target="_blank" rel="noopener noreferrer">
-          <img src="assets/icons/facebook-icon.svg" alt="Facebook" />
-        </a>
-        <a href="https://www.instagram.com/juanda404/" target="_blank" rel="noopener noreferrer">
-          <img src="assets/icons/instagram-icon.svg" alt="Instagram" />
-        </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-          <img src="assets/icons/linkedin.svg" alt="LinkedIn" />
-        </a>
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-          <img src="assets/icons/github_light.svg" alt="GitHub" />
-        </a>
+      <!-- Columna 2: Enlaces Rápidos -->
+      <div class="footer-links">
+        <h4>Enlaces</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="articulos.html">Posts</a></li>
+          <li><a href="profile.html">About me</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Redes Sociales -->
+      <div class="footer-icons-block">
+        <h4>Sígueme</h4>
+        <div class="footer-icons">
+          <a href="https://x.com/juanda4042" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icons/twitter.svg" alt="Twitter" />
+          </a>
+          <a href="https://www.facebook.com/Juandavidss" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icons/facebook-icon.svg" alt="Facebook" />
+          </a>
+          <a href="https://www.instagram.com/juanda404/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icons/instagram-icon.svg" alt="Instagram" />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icons/linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icons/github_light.svg" alt="GitHub" />
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-  
-  <!-- Barra de Copyright inferior -->
-  <div class="footer-bottom">
-    <p>&copy; 2026 Juan David. All rights reserved.</p>
-  </div>
-</footer>
+
+    <!-- Barra de Copyright inferior -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 Juan David. All rights reserved.</p>
+    </div>
+  </footer>
+  <script type="module" src="./articulos.js"></script>
+</body>
+
 </html>
